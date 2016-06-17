@@ -1,0 +1,23 @@
+fmod Nat is
+    sort Nat .
+
+    var N : Nat .
+    var M : Nat .
+
+    op z : -> Nat .
+
+    op s_ : Nat -> Nat .
+
+    op p : Nat Nat -> Nat .
+    eq p (N, z) = N .
+    eq p (N, s M) = s (p (N, M)) .
+
+    op m : Nat Nat -> Nat .
+    eq m (N, z) = z .
+    eq m (N, s z) = N .
+    eq m (N, s M) = p (N, m (N, M)) .
+
+    op w : Nat Nat -> Nat .
+    eq w (N, z) = s z .
+    eq w (N, s M) = m (N, w (N, M)) .
+endfm
