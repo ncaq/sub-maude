@@ -190,5 +190,5 @@ readExec f s = do
 g :: Show s => s -> IO ()
 g = putStrLn . pack . groom
 
-sampleNat :: String
-sampleNat = "sample/nat.maude"
+exampleNat :: String
+exampleNat = "example/nat.maude"
